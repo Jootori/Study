@@ -1,0 +1,52 @@
+class Accounting {
+	public double valueOfSupply;
+	public static double vatRate = 0.1;
+	public double getVAT() {
+		return valueOfSupply * vatRate;
+	}
+	public double getTotal() {
+		return valueOfSupply + getVAT();
+	}
+}
+public class AccountingAPP {
+	public static void main(String[] args) {
+		Accounting a1 = new Accounting();
+		a1.valueOfSupply = 10000.0;
+				
+		Accounting a2 = new Accounting();
+		a2.valueOfSupply = 20000.0;
+		
+		System.out.println("Value of Supply = " + a1.valueOfSupply);
+		System.out.println("Value of Supply = " + a2.valueOfSupply);
+		
+		System.out.println("VAT = " + a1.getVAT());
+		System.out.println("VAT = " + a2.getVAT());
+		
+		System.out.println();
+		System.out.println("Total = " + a1.getTotal());
+		System.out.println("Total = " + a2.getTotal());
+		
+		
+//		Accounting.valueOfSupply = 10000.0;
+//		System.out.println("Value of Supply" + Accounting.valueOfSupply);
+//		Accounting.valueOfSupply = 20000.0;
+//		System.out.println("Value of Supply" + Accounting.valueOfSupply);
+//		
+//		
+//		Accounting.valueOfSupply = 10000.0;
+//		System.out.println("VAT" + Accounting.getVAT());		
+//		Accounting.valueOfSupply = 20000.0;
+//		System.out.println("VAT" + Accounting.getVAT());	
+//		
+//		Accounting.valueOfSupply = 10000.0;
+//		System.out.println("Total" + Accounting.getTotal());
+//		Accounting.valueOfSupply = 20000.0;
+//		System.out.println("Total" + Accounting.getTotal());
+		
+		
+//		Accounting클래스 이름을 붙여줌으로 명시한다. 
+		
+		
+	}
+
+}
